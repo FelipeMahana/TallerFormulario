@@ -1,0 +1,23 @@
+<h1>Formulario</h1>
+
+<%= form_with model: @sale, local: true do |form| %>
+	<%= form.label :detail %>
+	<%= form.text_field :detail, id: :detalleV%>
+	<br>
+	<%= form.label :category %>
+	<%= form.text_field :category, id: :categoriaV %>
+	<br>
+	<%= form.label :value %>
+	<%= form.number_field :value, id: :valorV %>
+	<br>
+	<%= form.label :discount %>
+	<%= form.number_field :discount, min:1, max:40, id: :descuentoV %>
+	<br>
+	<%= form.label :exento_iva %>
+	<%= form.check_box :exento_iva %>
+	<%= form.submit "Crear" %>
+<% end %>
+
+<br>
+
+<%= notice %>
